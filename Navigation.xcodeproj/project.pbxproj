@@ -16,6 +16,7 @@
 		CDDE88262C8E9DB1004D11BF /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88252C8E9DB1004D11BF /* NavigationUITests.swift */; };
 		CDDE88282C8E9DB1004D11BF /* NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88272C8E9DB1004D11BF /* NavigationUITestsLaunchTests.swift */; };
 		CDDE88362C8E9FC4004D11BF /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88352C8E9FC4004D11BF /* CodeNextViewController.swift */; };
+		CDDE88382C8EA221004D11BF /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CDDE88272C8E9DB1004D11BF /* NavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CDDE88342C8E9DC7004D11BF /* Navigation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Navigation.xctestplan; sourceTree = "<group>"; };
 		CDDE88352C8E9FC4004D11BF /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
+		CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CDDE880F2C8E9DB1004D11BF /* LaunchScreen.storyboard */,
 				CDDE88122C8E9DB1004D11BF /* Info.plist */,
 				CDDE88352C8E9FC4004D11BF /* CodeNextViewController.swift */,
+				CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDE88362C8E9FC4004D11BF /* CodeNextViewController.swift in Sources */,
+				CDDE88382C8EA221004D11BF /* SegueNextViewController.swift in Sources */,
 				CDDE88092C8E9DAF004D11BF /* ViewController.swift in Sources */,
 				CDDE88052C8E9DAF004D11BF /* AppDelegate.swift in Sources */,
 				CDDE88072C8E9DAF004D11BF /* SceneDelegate.swift in Sources */,

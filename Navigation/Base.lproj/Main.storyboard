@@ -30,12 +30,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Segue Push"/>
+                                <connections>
+                                    <segue destination="Ozx-ZF-Pjh" kind="show" identifier="pushNext" id="5G5-RX-qdw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3F-Mh-91N">
                                 <rect key="frame" x="135" y="409" width="124" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Segue Modal"/>
+                                <connections>
+                                    <segue destination="Ozx-ZF-Pjh" kind="presentation" identifier="modalNext" id="xQ8-iB-Qpi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWV-nL-nXs">
                                 <rect key="frame" x="139" y="264" width="116" height="35"/>
@@ -62,6 +68,38 @@
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
         </scene>
+        <!--Segue Next View Controller-->
+        <scene sceneID="JMB-33-faM">
+            <objects>
+                <viewController id="Ozx-ZF-Pjh" customClass="SegueNextViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGI-Cr-tU7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I6-YV-TtN">
+                                <rect key="frame" x="32" y="410.66666666666669" width="329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pfT-HV-nPa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6I6-YV-TtN" firstAttribute="centerX" secondItem="eGI-Cr-tU7" secondAttribute="centerX" id="LsA-Up-UC4"/>
+                            <constraint firstItem="6I6-YV-TtN" firstAttribute="leading" secondItem="pfT-HV-nPa" secondAttribute="leading" constant="32" id="N8t-94-dcW"/>
+                            <constraint firstItem="6I6-YV-TtN" firstAttribute="centerY" secondItem="eGI-Cr-tU7" secondAttribute="centerY" id="aZI-wr-tA4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GtE-dz-zho"/>
+                    <connections>
+                        <outlet property="label" destination="6I6-YV-TtN" id="faa-eO-WCH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd7-5g-nsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="4"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="th4-LU-cYa">
             <objects>
@@ -81,6 +119,9 @@
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xQ8-iB-Qpi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
