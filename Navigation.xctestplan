@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "FF792558-20EB-4499-BD46-76C082DDE3EA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Navigation.xcodeproj",
+      "identifier" : "CDDE88002C8E9DAF004D11BF",
+      "name" : "Navigation"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Navigation.xcodeproj",
+        "identifier" : "CDDE88162C8E9DB1004D11BF",
+        "name" : "NavigationTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Navigation.xcodeproj",
+        "identifier" : "CDDE88202C8E9DB1004D11BF",
+        "name" : "NavigationUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
