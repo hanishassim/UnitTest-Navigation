@@ -17,6 +17,8 @@
 		CDDE88282C8E9DB1004D11BF /* NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88272C8E9DB1004D11BF /* NavigationUITestsLaunchTests.swift */; };
 		CDDE88362C8E9FC4004D11BF /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88352C8E9FC4004D11BF /* CodeNextViewController.swift */; };
 		CDDE88382C8EA221004D11BF /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */; };
+		CDDE883A2C8EA5A6004D11BF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */; };
+		CDDE883C2C8EA6E9004D11BF /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		CDDE88342C8E9DC7004D11BF /* Navigation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Navigation.xctestplan; sourceTree = "<group>"; };
 		CDDE88352C8E9FC4004D11BF /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
 		CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
+		CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		CDDE881A2C8E9DB1004D11BF /* NavigationTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */,
+				CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 					};
 					CDDE88162C8E9DB1004D11BF = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = CDDE88002C8E9DAF004D11BF;
 					};
 					CDDE88202C8E9DB1004D11BF = {
@@ -275,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDE883A2C8EA5A6004D11BF /* ViewControllerTests.swift in Sources */,
+				CDDE883C2C8EA6E9004D11BF /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +509,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -508,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanis.NavigationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Navigation";
@@ -519,6 +530,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
