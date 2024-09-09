@@ -19,6 +19,7 @@
 		CDDE88382C8EA221004D11BF /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */; };
 		CDDE883A2C8EA5A6004D11BF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */; };
 		CDDE883C2C8EA6E9004D11BF /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */; };
+		CDDE883E2C8ECDA4004D11BF /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE883D2C8ECDA4004D11BF /* SpyNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CDDE88372C8EA221004D11BF /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 		CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		CDDE883D2C8ECDA4004D11BF /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */,
 				CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */,
+				CDDE883D2C8ECDA4004D11BF /* SpyNavigationController.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDE883A2C8EA5A6004D11BF /* ViewControllerTests.swift in Sources */,
+				CDDE883E2C8ECDA4004D11BF /* SpyNavigationController.swift in Sources */,
 				CDDE883C2C8EA6E9004D11BF /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
