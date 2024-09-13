@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD05AA522C93D21B00050F55 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE883F2C93D0B0004D11BF /* ViewControllerPresentationSpy.xcframework */; };
 		CDDE88052C8E9DAF004D11BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88042C8E9DAF004D11BF /* AppDelegate.swift */; };
 		CDDE88072C8E9DAF004D11BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88062C8E9DAF004D11BF /* SceneDelegate.swift */; };
 		CDDE88092C8E9DAF004D11BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE88082C8E9DAF004D11BF /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		CDDE883D2C8ECDA4004D11BF /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
+		CDDE883F2C93D0B0004D11BF /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD05AA522C93D21B00050F55 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD05AA512C93D21B00050F55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CDDE87F82C8E9DAF004D11BF = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				CDDE881A2C8E9DB1004D11BF /* NavigationTests */,
 				CDDE88242C8E9DB1004D11BF /* NavigationUITests */,
 				CDDE88022C8E9DAF004D11BF /* Products */,
+				CD05AA512C93D21B00050F55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +139,7 @@
 				CDDE88392C8EA5A6004D11BF /* ViewControllerTests.swift */,
 				CDDE883B2C8EA6E9004D11BF /* TestHelpers.swift */,
 				CDDE883D2C8ECDA4004D11BF /* SpyNavigationController.swift */,
+				CDDE883F2C93D0B0004D11BF /* ViewControllerPresentationSpy.xcframework */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
