@@ -1,5 +1,6 @@
 @testable import Navigation
 import XCTest
+import ViewControllerPresentationSpy
 
 final class ViewControllerTests: XCTestCase {
     /// A good test name must have acton and then the outcome or effect
@@ -41,6 +42,20 @@ final class ViewControllerTests: XCTestCase {
             return
         }
         XCTAssertEqual(codeNextVC.label.text, "Modal from code")
+    }
+    
+    @MainActor
+    func test_tappingCodeModalButton_shouldPresentCodeNextViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut.loadViewIfNeeded()
+
+        let presentationVerifier = PresentationVerifier() // Init must be before the tap action to allow interception
+                
+        tap(sut.codeModalButton)
+        
+        let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut) // Use method swizzling to intercept calls to present view controllers, it capture arguments but without presenting anything
+        XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
     }
 }
 
