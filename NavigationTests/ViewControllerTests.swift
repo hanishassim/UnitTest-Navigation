@@ -13,6 +13,7 @@ final class ViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
+        executeRunLoop() // To give the window chance to disappear for segue-based navigation
         sut = nil
         super.tearDown()
     }
@@ -63,6 +64,17 @@ final class ViewControllerTests: XCTestCase {
         
         let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut) // Use method swizzling to intercept calls to present view controllers, it capture arguments but without presenting anything
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
+    }
+    
+    @MainActor
+    func test_tappingSeguePushButton_shouldShowSegueNextViewController() {
+        let presentationVerifier = PresentationVerifier()
+        
+        putInWindow(sut) // To load the view controller into visible UIWindow
+        tap(sut.seguePushButton)
+        
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)
+        XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
     }
 }
 
