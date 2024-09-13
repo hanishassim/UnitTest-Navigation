@@ -23,4 +23,39 @@ final class ViewControllerTests: XCTestCase {
         }
         XCTAssertEqual(codeNextVC.label.text, "Pushed from code")
     }
+    
+    /// This test is incorrect because the VC is not deinitialized,
+    /// so it may have potential memory leak (breaking clean room goals)
+    func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut.loadViewIfNeeded()
+        
+        UIApplication.shared.windows.first?.rootViewController = sut
+        
+        tap(sut.codeModalButton)
+        
+        let presentedVC = sut.presentedViewController
+        guard let codeNextVC = presentedVC as? CodeNextViewController else {
+            XCTFail("Expected CodeNextViewController, " + "but was \(String(describing: presentedVC))")
+            return
+        }
+        XCTAssertEqual(codeNextVC.label.text, "Modal from code")
+    }
+}
+
+/// This class only to use for view controller that comes from XIB or code-based, not storyboard
+/// as storyboards stores an instance of particular class
+private class TestableViewController: ViewController {
+    var presentCallCount = 0
+    var presentArgsViewController: [UIViewController] = []
+    var presentArgsAnimated: [Bool] = []
+    var presentArgsClosure: [(() -> Void)?] = []
+    
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        presentCallCount += 1
+        presentArgsViewController.append(viewControllerToPresent)
+        presentArgsAnimated.append(flag)
+        presentArgsClosure.append(completion)
+    }
 }
