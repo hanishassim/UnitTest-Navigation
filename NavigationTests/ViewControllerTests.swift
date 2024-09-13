@@ -3,11 +3,22 @@ import XCTest
 import ViewControllerPresentationSpy
 
 final class ViewControllerTests: XCTestCase {
+    private var sut: ViewController!
+    
+    override func setUp() {
+        super.setUp()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
+        sut.loadViewIfNeeded()
+    }
+    
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+    
     /// A good test name must have acton and then the outcome or effect
     func test_tappingCodePushButton_shouldPushCodeNextViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
         let navigation = UINavigationController(rootViewController: sut)
         
         tap(sut.codePushButton)
@@ -28,10 +39,6 @@ final class ViewControllerTests: XCTestCase {
     /// This test is incorrect because the VC is not deinitialized,
     /// so it may have potential memory leak (breaking clean room goals)
     func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self))
-        sut.loadViewIfNeeded()
-        
         UIApplication.shared.windows.first?.rootViewController = sut
         
         tap(sut.codeModalButton)
